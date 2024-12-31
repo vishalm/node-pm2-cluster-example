@@ -1,0 +1,3 @@
+[submodule "node-app-observability"]
+	path = node-app-observability
+	url = https://github.com/vishalm/node-app-observability.git
