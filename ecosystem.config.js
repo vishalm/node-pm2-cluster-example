@@ -4,7 +4,7 @@ module.exports = {
         name: 'node-app-observability',                  // Your app's name
         script: './node-app-observability/src/app.js',               // The entry file for your app (replace with your app's entry file)
         exec_mode: 'cluster',  // Use cluster mode for load balancing
-        instances: 'max',  // Scale to available CPU cores
+        instances: '5',  // Scale to available CPU cores
         watch: false,  // Disable file watching (set to true if needed)
         merge_logs: true,  // Merge logs from all instances into a single log file
         log_date_format: 'YYYY-MM-DD HH:mm:ss',  // Date format for logs
@@ -20,7 +20,7 @@ module.exports = {
         name: 'node-app-observability-pm2',                        // Name of the second API
         script: './node-app-observability-pm2/src/app.js',          // The entry file for your app (replace with your app's entry file)
         exec_mode: 'cluster',  // Use cluster mode for load balancing
-        instances: 'max',  // Scale to available CPU cores
+        instances: '5',  // Scale to available CPU cores
         watch: false,  // Disable file watching (set to true if needed)
         merge_logs: true,  // Merge logs from all instances into a single log file
         log_date_format: 'YYYY-MM-DD HH:mm:ss',  // Date format for logs

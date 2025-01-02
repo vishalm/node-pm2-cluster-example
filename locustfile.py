@@ -4,6 +4,7 @@ from locust import HttpUser, TaskSet, task, between
 class NodeAppObservabilityTasks(TaskSet):
     @task(1)
     def health_check(self):
+        host = self.client.choose(self.hosts)
         response = self.client.get("/health-check")
         assert response.status_code == 200, f"Health check failed with {response.status_code}"
 
